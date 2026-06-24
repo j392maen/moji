@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文字起こし</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>文字起こし</h1>
+      <div class="lang-buttons">
+        <button id="btn-ja" class="lang-btn active" data-lang="ja-JP">JA</button>
+        <button id="btn-en" class="lang-btn" data-lang="en-US">EN</button>
+      </div>
+    </header>
+
+    <div id="output" role="log" aria-live="polite" aria-label="文字起こし結果">
+      <span id="final-text"></span><span id="interim-text"></span>
+      <span id="placeholder" class="placeholder">ここに文字起こし結果が表示されます</span>
+    </div>
+
+    <div class="controls">
+      <button id="btn-start" class="ctrl-btn primary" disabled>録音開始</button>
+      <button id="btn-stop"  class="ctrl-btn"         disabled>停止</button>
+      <button id="btn-clear" class="ctrl-btn"                 >クリア</button>
+      <button id="btn-copy"  class="ctrl-btn"                 >コピー</button>
+    </div>
+
+    <div id="status" class="status" aria-live="assertive">初期化中...</div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
